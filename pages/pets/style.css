@@ -1,0 +1,466 @@
+/* ---LINK---FONTS---------------- */
+@font-face {
+    font-family: GeorgiaRegular;
+    src: url(../../assets/fonts/Georgia/Georgia\ Regular\ font.ttf);
+}
+@font-face {
+    font-family: GeorgiaBold;
+    src: url(../../assets/fonts/Georgia/georgia\ bold.ttf);
+}
+@font-face {
+    font-family: ArialRegular;
+    src: url(../../assets/fonts/Arial/arial.ttf);
+}
+@font-face {
+    font-family: ArialBold;
+    src: url(../../assets/fonts/Arial/arialbd.ttf);
+}
+@font-face {
+    font-family: ArialItalic;
+    src: url(../../assets/fonts/Arial/ariali.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: ArialRegular;
+    color: #545454;
+    font-weight: 400;
+    background: #F6F6F6;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #545454;
+    transition: all .6s ease;
+}
+a:hover {
+    color: #292929;
+}
+h2,h1 {
+    font-weight: 400;
+    font-family: GeorgiaRegular;
+    font-size: 35px;
+}
+button {
+    font-family: GeorgiaRegular;
+    font-style: normal;
+    font-weight: 400;
+    padding: 15px 45px;
+    background: #F1CDB3;
+    border-radius: 100px;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    border: none;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+button:hover {
+    background: #FDDCC4;
+}
+/* ---HEADER-------------------- */
+.header {
+    padding: 29px 0px;
+    color: #fff;
+    background: #FFFFFF;
+}
+.header a {
+    line-height: 130%;
+}
+.header_contant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_contant_logo {
+}
+.logo {
+}
+.logo__title {
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-bottom: 8px;
+}
+.logo__label {
+    font-family: ArialRegular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    padding-left: 3px;
+    color: #292929;
+}
+.header_contant_list_menu {
+}
+.list__menu {
+}
+.list__menu__items {
+    display: flex;
+}
+.list__menu__item {
+    list-style: none;
+}
+.list__menu__item:not(:last-child) {
+    padding-right: 35px;
+}
+.list__menu__item .second {
+    border-bottom: 3px solid #F1CDB3;
+    padding-bottom: 3px;
+    color: #292929;
+}
+.burger_menu {
+    display: none;
+}
+.burger_menu_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 47px;
+    z-index: 20;
+    transition: all .6s ease;
+}
+.burger_menu_block_active {
+    padding: 1px 0;
+    transform: rotate(90deg);
+}
+.burger_menu_item {
+    background: #000;
+    height: 2px;
+    display: block;
+    width: 100%;
+    margin: 2px 0;
+}
+/* ---BURGER__BLOCK--PROPERTY----- */
+.burger_menu_nav_block {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0px;
+    text-align: center;
+    padding-top: 140px;
+    z-index: 15;
+    overflow: hidden;
+    opacity: 0;
+    box-sizing: border-box;
+    transition: all .6s ease;
+}
+.burger_menu_nav_block__active {
+    opacity: 1;
+    width: 320px;
+}
+.list__menu_burger .list__menu__items {
+    gap: 40px;
+}
+.list__menu_burger .list__menu__item {
+    padding-right: 0;
+}
+.burger_menu_nav_block_background {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    display: none;
+}
+.burger_menu_nav_block_background_active {
+    display: block;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 765px) {    
+    .header_contant_list_menu:not(:last-child) {
+        display: none;
+    }
+    .burger_menu {
+        display: block;
+    }
+}
+@media (max-width: 325px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+/*---FRIENDS-------------  */
+    .friends {
+        padding: 80px 0px 102px 0px;
+    }
+    .friends__title {
+        text-align: center;
+        letter-spacing: 0.06em;
+        margin-bottom: 58px;
+        line-height: 130%;
+    }
+    .friends_blocks {
+    }
+    .friends__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 26px;
+    }
+    .friends__choice_arrow_btn {
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        border: 2px solid #F1CDB3;
+        border-radius: 100%;
+        text-align: center;
+        background: #fff;
+        padding-top: 4px;
+    }
+    .btn_active {
+        background: #F1CDB3;
+    }
+    .btn_silver {
+        border: 2px solid #CDCDCD;
+        cursor: no-drop;
+        transition: all .6s ease;
+    }
+    .btn_silver:hover {
+        background: #fff
+    }
+    .dogs_cont_block {
+        background: #FAFAFA;
+        max-width: 270px;
+        border-radius: 9px;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 30px;
+        font-family: GeorgiaRegular;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all .6s ease;
+    }
+    .dogs_cont_block:hover {
+        transform: scale(1.1);
+        background: #fff;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+    .dogs_cont_block:hover button {
+        background: #FDDCC4;
+    }
+    .dogs_cont_block h3 {
+        font-weight: 400;
+        letter-spacing: 0.06em;
+    }
+    .dogs_cont_block_title {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        letter-spacing: 0.06em;
+    }
+    .dogs_cont_block_btn {
+        padding: 15px 45px;
+        border: 2px solid #F1CDB3;
+        border-radius: 100px;
+        color: #292929;
+        background: #fff;
+    }
+    .friends__buttons {
+        text-align: center;
+        margin-top: 56px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    @media (max-width: 770px) {
+        .friends {
+            padding: 80px 0px 77px 0px;
+        }
+        .friends__title {
+            margin-bottom: 28px;
+        }
+        .dogs_cont_block {
+            margin-bottom: 26px;
+        }
+        .friends__items {
+            margin-bottom: 0;
+            padding: 0px 64px;
+        }
+        #dogs_cont_block_dv {
+            display: none;
+        }
+        #dogs_cont_block_da {
+            display: none;
+        }
+        .friends__buttons {
+            margin-top: 9px;
+        }
+    }
+    @media (max-width: 728px) {
+        .friends__items {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    @media (max-width: 470px) {
+        .friends .wrapper {
+            padding: 0 15px;
+        }
+        .friends {
+            padding: 42px 0px 46px 0px;
+        }
+        .friends__title {
+            font-size: 25px;
+            margin-bottom: 39px;
+            width: 100%;
+        }
+        .friends__items {
+            padding: 0;
+        }
+        .friends__items:last-child {
+            display: none;
+        }
+        #last_item_friends {
+            display: none;
+        }
+        .friends__buttons {
+            gap: 9px;
+        }
+    }
+    /* ---FOOTER----------------- */
+    .footer {
+        background: url('../../assets/images/Not_only/2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #F1CDB3;
+    }
+    .footer h2 {
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 130%;
+        max-width: 280px;
+    }
+    .footer_content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer_contant_block {
+        margin-top: 54px;
+    }
+    .foot_block {
+    }
+    .foot_block_title {
+    }
+    .foot_block_icon_text a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-weight: 400;
+        font-family: GeorgiaRegular;
+        font-size: 20px;
+        margin-top: 40px;
+        color: #F1CDB3;
+        transition: all .6s ease;
+    }
+    .foot_block_icon_text a:hover {
+        color: #f5f5f5;
+
+    }
+    .foot_block_icon_text_label {
+        letter-spacing: 0.06em;
+    }
+    #boston_street {
+        margin-top: -14px;
+    }
+    #south_park {
+        margin-top: -20px;
+    }
+    .footer_content_img img {
+        margin-top: 36px;
+    }
+    @media (max-width: 1039px) {
+        .foot_block:not(:first-child) {
+            margin-left: 40px;
+        }
+        .footer_content_img {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @media (max-width: 992px) {
+       .footer .wrapper {
+            padding: 0 65px;
+        }
+        .footer_contant_block {
+            margin-top: 30px;
+        }
+        #boston_street {
+            margin-top: 0px;
+        }
+        #south_park {
+            margin-top: 0px;
+        }
+        .footer_content_img img {
+            margin-top: 56px;
+        }
+        #foot_block a:first-child {
+            margin-top: 24px;
+        }
+    }
+    @media (max-width: 744px) {
+        .footer_content {
+            justify-content: center;
+        }
+    }
+    @media (max-width: 475px) {
+        .footer .wrapper {
+            padding: 0 10px;
+        }
+         .foot_block:not(:first-child) {
+            margin-left: 0px;
+        }
+        .footer h2 {
+            font-size: 25px;
+            text-align: center;
+        }
+        .footer_content_img img {
+            max-width: 260px;
+        }
+    }
+    @media (max-width: 330px) {
+        #foot_block_icon_text_t a {
+            margin-left: 13px;
+        }
+        .foot_block:nth-child(2) {
+            margin-top: 39px;
+        }
+        .footer_content_img img {
+            margin-top: 38px;
+        }
+        #foot_block a:first-child {
+            margin-top: 30px;
+        }
+    }
